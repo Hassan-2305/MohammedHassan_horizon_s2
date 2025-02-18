@@ -1,0 +1,8 @@
+>Initialised the 6 servo motors
+>Serial begin used to connect with the serial monitor
+>Specified the PWM ports of arduino in which the signal of servo are connected with servo.attch()
+>initially set the servo motors to angle 0
+>The if statement is used with Serial.available() to check if there is any data from the serial monitor. If there is no data, it returns 0.
+>Serial.parseInt used to input the angle from the user via serial monitor.
+>if the angle user entered is greater than 180 or less than 0 motor rotates to the desired angle else it remains in angle 0.
+>hence the six motors rotate at same time according to the angles user specified.
