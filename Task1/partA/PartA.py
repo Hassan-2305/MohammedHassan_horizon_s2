@@ -11,9 +11,9 @@ for i in range(points):
     x.append(x_coo)
     y.append(y_coo)
 
-    plt.scatter(x, y, marker ='o')
+plt.scatter(x, y, marker ='o')
 
-    plt.xlabel('X-axis')
+plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.title('Plotting Points in Matplotlib')
 
