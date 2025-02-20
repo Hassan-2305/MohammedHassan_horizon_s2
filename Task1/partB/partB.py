@@ -15,7 +15,7 @@ for i in range(points):
     x.append(x_coo)
     y.append(y_coo)
 
-plt.scatter(x, y, marker='o', color='blue', label='Points')
+plt.scatter(x, y, marker='o', color='blue')
 
 for i in range(len(x)):
     short_dist = float('inf')  
