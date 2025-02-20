@@ -1,0 +1,39 @@
+                                                    Turtle sim using ros2 iron
+
+You can check wich are you using by ls /opt/ros
+
+
+We can check which version of ROS you are using by running:    ls /opt/ros
+
+Environment can be set up by:  source /opt/ros/iron/setup.bash
+
+We can verify if the environmental variables is properly setup by:  printenv | grep -I ROS  {if we see ros version 2 and ros distro iron environment is setup correctly )
+ Next to install turtlesim: run sudo apt install ros-iron-turtlesim
+
+to check turtlesim is properly installed: run ros2 pkg executables turtlesim
+the output should look like this
+ 	turtlesim draw_sqaure
+ 	turtlesim mimic 
+ 	turtlesim turtlr_teleop_key
+ 	turtlesim_node
+
+This means that the installation was correct.
+
+To start turtlesim run: ros2 run turtlesim turtlesim_node
+The turtle with a gui is seen.
+This will open the turtle's GUI, but the turtle won't move yet because the teleoperation node is not initialized.
+
+
+To setup a teleoperation node open a new terminal.
+But we need to setup the environment for the package to run: (source /opt/ros/iron/setup.bash)
+
+and then run: ros2 run turtlesim turtle teleop key
+
+
+
+Behind the scenes
+The turtle teleoperation key
+keys pressed by user is sent to the turtlesim node and the turtle will move
+
+
+
