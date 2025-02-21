@@ -1,0 +1,39 @@
+									ROS2 PUBLISHER AND RECIEVER
+
+PREREQUISITES:
+	>Ubuntu ISO: Download the Ubuntu ISO file and use a virtual machine (VM) to install and run Ubuntu
+	>install ros 2 humble from ros2 humble documentation  (https://docs.ros.org/en/humble/index.html)
+
+For communication we have two nodes subscriber node and publisher
+the publisher publish a message to the subscriber
+
+ROS2 ENVIRONMENT SETUP
+	create a workspace folder  mkdir -p /workspace/src
+     To build completer workspace
+	cd /workspace
+	colcon build create 3 workspace folders
+	build 
+	install 
+	log  
+                                                     
+cd /workspace/src
+then to create a  package ros2 pkg create --build-type ament_python first_package
+this creates a subfolder called first_package
+cd first_package
+we will create a source file for publisher node
+gedit publisher.py
+	in the gedit we can write the python code for publisher and specify what message to publiah
+(code is pushed in another file called publisher.py in GitHub)
+then create another python file using : gedit subscriber.py
+here in this code the subscriber will receive the message sent by the publisher
+
+Next in the setup.py file we need to specify the entry points like publisher = <file name>.publisher:main
+           subscriber = <file name>.subscriber:main
+after this run the publisher and receiver in two different terminals using
+ros2 run <filename> publisher
+ros2 run <filename> subscriber
+this will only work when each time we need to setup the environment  (source /opt/ros/humble/setup.bash
+)
+
+after this we can see the publisher publishing a message(in my case its I am Hassan!!!)
+And the subscriber receives the message (I am Hassan!!!)
