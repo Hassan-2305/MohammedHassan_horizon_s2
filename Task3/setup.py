@@ -1,11 +1,11 @@
 from setuptools import setup
 
-package_name = 'simple_pub_sub'
+package_name = 'First_package'
 
 setup(
     name=package_name,
     version='0.0.1',
-    packages=['simple_pub_sub'],
+    packages=['First_package'],
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
